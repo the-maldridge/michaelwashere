@@ -2,7 +2,7 @@
 title: Michael Was Here
 email: maldridge@michaelwashere.net
 description: This site serves as my project log, as well as my resume and portfolio.
-baseurl: "/" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.michaelwashere.net" # the base hostname & protocol for your site
 twitter_username: ""
 github_username: the-maldridge
