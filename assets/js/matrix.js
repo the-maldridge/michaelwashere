@@ -53,6 +53,16 @@ function draw() {
     }
 }
 
-resizeHeader()
-setInterval(draw, 33);
+function drawTitle(titleText) {
+    x=10;
+    y=50;
+    ctx.font("30px arial");
+    ctx.fillStyle = "#000000";
+    ctx.fillText(titleText, x, y);
+}
+
+resizeHeader();
+draw();
+drawTitle("Michael Was Here");
+//setInterval(draw, 33);
 window.addEventListener("resize",resizeHeader);
