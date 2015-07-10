@@ -1,7 +1,7 @@
 # Site settings
 title: Michael Was Here
 email: maldridge@michaelwashere.net
-description: This site serves as my project log, as well as my resume and portfolio.
+description: I do stuff with computers, its on this site.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.michaelwashere.net" # the base hostname & protocol for your site
 twitter_username: ""

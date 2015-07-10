@@ -2,12 +2,13 @@ var c = document.getElementById("header");
 var ctx = c.getContext("2d");
 
 
-//chinese characters - taken from the unicode charset
-var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
+var rainChars = "ムタ二コク1234567890シモラキリエスハヌトユABCDEF";
 //converting the string into an array of single characters
-chinese = chinese.split("");
+rainChars= rainChars.split("");
 
 var font_size = 10;
+var title_font_size = 35;
+var title_text = "Michael Was Here"
 var columns=0;
 var drops=[];
 
@@ -16,6 +17,7 @@ function resizeHeader() {
     c.height = 100;
     c.width = c.parentNode.clientWidth;
     
+    title_font_size = c.height * .65;
     columns = c.width/font_size; //number of columns for the rain
     //an array of drops - one per column
     drops = [];
@@ -33,13 +35,13 @@ function draw() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
     ctx.fillRect(0, 0, c.width, c.height);
 
-    ctx.fillStyle = "#0F0"; //green text
-    ctx.font = font_size + "px arial";
+    ctx.fillStyle = "#007500"; //green text
+    ctx.font = font_size + "px monospace";
     //looping over drops
     for(var i = 0; i < drops.length; i++)
     {
 	//a random chinese character to print
-	var text = chinese[Math.floor(Math.random()*chinese.length)];
+	var text = rainChars[Math.floor(Math.random()*rainChars.length)];
 	//x = i*font_size, y = value of drops[i]*font_size
 	ctx.fillText(text, i*font_size, drops[i]*font_size);
 
@@ -51,18 +53,20 @@ function draw() {
 	//incrementing Y coordinate
 	drops[i]++;
     }
+    drawTitle()
 }
 
-function drawTitle(titleText) {
-    x=10;
-    y=50;
-    ctx.font("30px arial");
-    ctx.fillStyle = "#000000";
-    ctx.fillText(titleText, x, y);
+function drawTitle() {
+    ctx.font= title_font_size + "px monospace";
+    x=c.width/2 - ctx.measureText(title_text).width/2;
+    y=c.height/2 - title_font_size/2;
+    ctx.textBaseline="hanging";
+    ctx.fillStyle = "#00FF00";
+    ctx.fillText(title_text, x, y);
 }
 
 resizeHeader();
 draw();
 drawTitle("Michael Was Here");
-//setInterval(draw, 33);
+setInterval(draw, 33);
 window.addEventListener("resize",resizeHeader);
