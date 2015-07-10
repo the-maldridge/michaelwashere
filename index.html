@@ -1,10 +1,6 @@
 ---
 layout: default
 ---
-{% for post in posts %}
-foo
-{% endfor %}
-
 {% for post in paginator.posts %}
 <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 {{ post.excerpt }}

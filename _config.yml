@@ -4,8 +4,8 @@ email: maldridge@michaelwashere.net
 description: I do stuff with computers, its on this site.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.michaelwashere.net" # the base hostname & protocol for your site
-twitter_username: ""
-github_username: the-maldridge
+paginate: 5
+paginate_path: "/archive/page:num/"
 
 # Build settings
 markdown: kramdown
