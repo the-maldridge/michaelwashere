@@ -8,34 +8,63 @@ body {
     background: #000000;
 }
 
-header {
-    background: black;
-}
-
-#pageConstraint {
-    background: lightgrey;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+header h2 {
+    color: #BDBDBD;
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Play', sans-serif;
 }
 
 nav {
     text-align: center;
-    background: black;
 }
 
 nav a {
     text-align: center;
-    font-size: 8;
+    font-weight: bold;
     margin-left: 4px;
     margin-right: 4px;
 }
 
-#content {
-    padding: 4px;
+a:link, a:visited, a:active {
+    color: #BDBDBD;
+}
+
+a:active {
+    color: #007500;
 }
 
 footer p {
     text-align: center;
-    font-size: 10
+    font-size: 10;
+    margin: 0px;
+}
+
+#content {
+    margin:0;
+    padding:0;
+}
+
+#pageConstraint {
+    background: #151515;
+    color: #BDBDBD;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #6E6E6E;
+    border-radius: 8px;
+
+}
+
+.postBox {
+    background: #252525;
+    border: 2px solid #6E6E6E;
+    border-radius: 8px;
+    margin: 0.5em;
+    padding: 1em;
+}
+
+.postTitle {
+    color: #BDBDBD;
+    font-family: 'Play', sans-serif;
 }

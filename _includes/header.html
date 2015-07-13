@@ -1,5 +1,6 @@
 <header>
-  <br />
+  <h2>{{ site.title }}</h2>
+  <hr />
   <nav>
     <a href="{% if site.baseurl == '' %}/{% else %}{{ site.baseurl }}{% endif %}">Home</a>
     
@@ -9,4 +10,5 @@
     {% endif %}
     {% endfor %}
   </nav>
+  <hr />
 </header>
