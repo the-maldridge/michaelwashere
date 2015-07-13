@@ -34,6 +34,10 @@ a:active {
     color: #007500;
 }
 
+article {
+    padding: 1em;
+}
+
 footer p {
     text-align: center;
     font-size: 10;
@@ -67,4 +71,9 @@ footer p {
 .postTitle {
     color: #BDBDBD;
     font-family: 'Play', sans-serif;
+}
+
+.contentMeta {
+    margin: 1em;
+    padding: 0;
 }

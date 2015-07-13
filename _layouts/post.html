@@ -1,9 +1,13 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-
-<article>
-  {{ content }}
-</article>
+<div class="postBox">
+  <div class="contentMeta">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </div>
+  
+  <article>
+    {{ content }}
+  </article>
+</div>
