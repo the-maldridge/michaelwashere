@@ -1,9 +1,11 @@
-canvas, nav {
-    margin: 0;
+canvas {
+    display: block;
+    position: absolute;
+    z-index: -1;
 }
 
 body {
-    background: #050505;
+    background: #000000;
 }
 
 header {

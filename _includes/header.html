@@ -1,16 +1,12 @@
-<div id="pageConstraint">
-  <header>
-    <canvas id="header" width="100%" height="100%"></canvas>
-    <br />
-    <nav>
-      <a href="{% if site.baseurl == '' %}/{% else %}{{ site.baseurl }}{% endif %}">Home</a>
-      
-      {% for page in site.pages %}
-      {% if page.title %}
-      <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-      {% endif %}
-      {% endfor %}
-    </nav>
-    <script type="text/javascript" src="/assets/js/matrix.js"></script>
-  </header>
-</div>
+<header>
+  <br />
+  <nav>
+    <a href="{% if site.baseurl == '' %}/{% else %}{{ site.baseurl }}{% endif %}">Home</a>
+    
+    {% for page in site.pages %}
+    {% if page.title %}
+    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+    {% endif %}
+    {% endfor %}
+  </nav>
+</header>

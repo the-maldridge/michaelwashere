@@ -1,23 +1,19 @@
-var c = document.getElementById("header");
+var c = document.getElementById("matrix-rain");
 var ctx = c.getContext("2d");
-
 
 var rainChars = "ムタ二コク1234567890シモラキリエスハヌトユABCDEF";
 //converting the string into an array of single characters
 rainChars= rainChars.split("");
 
 var font_size = 10;
-var title_font_size = 35;
-var title_text = "Michael Was Here"
 var columns=0;
 var drops=[];
 
-function resizeHeader() {
+function resize() {
     //size the canvas
-    c.height = 100;
-    c.width = c.parentNode.clientWidth;
+    c.height = window.innerHeight;
+    c.width = window.innerWidth;
     
-    title_font_size = c.height * .65;
     columns = c.width/font_size; //number of columns for the rain
     //an array of drops - one per column
     drops = [];
@@ -53,20 +49,9 @@ function draw() {
 	//incrementing Y coordinate
 	drops[i]++;
     }
-    drawTitle()
 }
 
-function drawTitle() {
-    ctx.font= title_font_size + "px monospace";
-    x=c.width/2 - ctx.measureText(title_text).width/2;
-    y=c.height/2 - title_font_size/2;
-    ctx.textBaseline="hanging";
-    ctx.fillStyle = "#00FF00";
-    ctx.fillText(title_text, x, y);
-}
-
-resizeHeader();
+resize();
 draw();
-drawTitle("Michael Was Here");
 setInterval(draw, 33);
-window.addEventListener("resize",resizeHeader);
+window.addEventListener("resize",resize);
