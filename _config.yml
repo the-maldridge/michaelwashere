@@ -9,3 +9,4 @@ paginate_path: "/archive/page:num/"
 
 # Build settings
 markdown: kramdown
+plugins: [jekyll-paginate]
