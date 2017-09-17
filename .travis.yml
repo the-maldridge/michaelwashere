@@ -1,6 +1,4 @@
 language: ruby
-script: "bundle exec jekyll build"
-branches:
-  only:
-      - gh-pages
-      - master
+script:
+  - bundle install --path vendor/bundle
+  - bundle exec jekyll build
