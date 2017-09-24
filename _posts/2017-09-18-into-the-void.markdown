@@ -400,7 +400,7 @@ and nearly untested. We had no polite way to telling them "bad idea,
 lets wait for a release" because there where already dozens of
 packages with the same stability issues merged. So we decided to
 disallow them.
-`
+
 ## In Closing
 
 You've made it to the bottom of my wall of text, congratulations!  I
